@@ -1,1 +1,11 @@
-
+import java.util.Scanner
+fun main () {
+        println ("How many cookies did you eat? ")
+        var cookiesAte =  readLine()?.toDoubleOrNull() ?: error("Please enter a double")
+        val cookiesBag: Double = 40.00
+        val servings: Double = 10.00
+        val caloriesPerServing: Double = 300.00
+        val caloriesPerCookie: Double = (caloriesPerServing / servings)
+        var calories: Double = (cookiesAte * caloriesPerCookie)
+        println("Your calorie intake was $calories")
+    }
